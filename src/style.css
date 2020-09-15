@@ -1,9 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
 *{
     padding: 0;
     margin: 0;
+}
+ul{
+    list-style-type: none;
+}
+body{
+    font-family: 'Dancing Script', cursive;
 }
 
 .container{
     max-width: 1170px;
     margin: 0 auto
+}
+.header{
+    text-align: center;
+    width: 100%;
+    background-color: cadetblue;
+    padding: 15px 0;
+    color: white;
+}
+section{
+    padding: 20px 0px;
+}
+section .todo_list-items{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
 }
