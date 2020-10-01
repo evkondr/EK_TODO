@@ -27,5 +27,29 @@ section{
 section .todo_list-items{
     display: flex;
     justify-content: center;
-    font-size: 30px;
+    font-size: 25px;
+}
+section .todo_list-items li{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border: 1px black solid;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+section .todo_list-items input{
+    margin-right: 15px;
+}
+section .todo_list-items li button{
+    font-size: 20px;
+    border: none;
+    background: none;
+    margin-left: 10px;
+    outline: none;
+    color: inherit;
+} 
+section .todo_list-items li.done{
+    text-decoration: line-through;
+    color: red;
+    border-color: red;
 }

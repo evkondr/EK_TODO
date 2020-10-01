@@ -1,16 +1,19 @@
 import React  from 'react'
 import PropTypes from 'prop-types'
 import TodoItem from './TodoItem'
+import AddTodo from '../AddTodo'
 
 const Todolist = ({todos, onTogle}) => {
     return(
         <section>
             <div className='todo_list'>
                 <div className="container">
+                    <AddTodo />
                     <div className='todo_list-items'>
-                        <ul>
+                        {todos.length ? <ul>
                             {todos.map((todo, index)=><TodoItem key={todo.id} todo={todo} index={index} onChange={onTogle}/>)}
-                        </ul>
+                        </ul>: <p>No todos</p>}
+                        
                     </div>
                 </div>
             </div>
@@ -20,6 +23,6 @@ const Todolist = ({todos, onTogle}) => {
 }
 Todolist.propTypes = {
     todos: PropTypes.arrayOf(PropTypes.object).isRequired,
-    onTogle: PropTypes.func
+    onTogle: PropTypes.func.isRequired
 }
 export default Todolist
