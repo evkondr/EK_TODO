@@ -7,7 +7,7 @@ const Todolist = ({todos, onTogle}) => {
     return(
         <section>
             <div className='todo_list'>
-                <div className="container">
+                <div className="container column">
                     <AddTodo />
                     <div className='todo_list-items'>
                         {todos.length ? <ul>

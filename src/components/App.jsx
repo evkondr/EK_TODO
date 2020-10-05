@@ -1,14 +1,17 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import Header from './Header'
 import Todolist from './Todolist'
 import Context from '../context'
 
 let App = () => {
-    let [todos, setTodos] = useState([
-        {id: 1, title: 'Buy some food', completed: true},
-        {id: 2, title: 'Read book', completed: false},
-        {id: 3, title: 'Clean house', completed: false}
-    ])
+    let [todos, setTodos] = useState([])
+
+    useEffect(() => {
+        fetch('https://jsonplaceholder.typicode.com/todos')
+        .then(response => response.json())
+        .then(todos => setTodos(todos))
+    },[])
+
     const onTogle = (id) =>{
         setTodos(todos.map(todo=>{
             if(todo.id == id){

@@ -53,3 +53,27 @@ section .todo_list-items li.done{
     color: red;
     border-color: red;
 }
+.addtodo-form{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.addtodo-form input{
+    border: 1px black solid;
+    border-radius: 10px;
+    padding: 5px 10px;
+    outline: none;
+    margin-right: 5px;
+}
+.addtodo-form button{
+    background-color: #43d18e;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+}
